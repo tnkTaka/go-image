@@ -12,15 +12,16 @@ import (
 
 func main() {
 	// path of image file
-	imagePath := "./one.png"
+	encodePath := "./one.png"
+	decodePath := "./one.jpg"
 
-	imageData, err := imageBase64Encode(imagePath, 500, 500)
+	imageData, err := imageBase64Encode(encodePath, 500, 500)
 	if err != nil {
 		// error
 		log.Fatal(err)
 	}
 
-	err = imageBase64Decode(imagePath, imageData)
+	err = imageBase64Decode(decodePath, imageData)
 	if err != nil {
 		// error
 		log.Fatal(err)
