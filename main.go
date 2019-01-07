@@ -11,9 +11,8 @@ import (
 )
 
 func main() {
-	// path of image file
-	encodePath := "./one.png"
-	decodePath := "./one.jpg"
+	encodePath := "./one.png" // request image path
+	decodePath := "./one.jpg" // Image path after resize
 
 	imageData, err := imageBase64Encode(encodePath, 500, 500)
 	if err != nil {
