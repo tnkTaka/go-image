@@ -11,16 +11,16 @@ import (
 )
 
 func main() {
-	encodePath := "./one.png" // request image path
-	decodePath := "./one.jpg" // Image path after resize
+	beforePath := "./one.png" // request image path
+	afterPath := "./one.jpg"  // Image path after resize
 
-	imageData, err := imageBase64Encode(encodePath, 500, 500)
+	encodeData, err := imageBase64Encode(beforePath, 500, 500)
 	if err != nil {
 		// error
 		log.Fatal(err)
 	}
 
-	err = imageBase64Decode(decodePath, imageData)
+	err = imageBase64Decode(afterPath, encodeData)
 	if err != nil {
 		// error
 		log.Fatal(err)
