@@ -16,13 +16,11 @@ func main() {
 
 	encodeData, err := imageBase64Encode(beforePath, 500, 500)
 	if err != nil {
-		// error
 		log.Fatal(err)
 	}
 
 	err = imageBase64Decode(afterPath, encodeData)
 	if err != nil {
-		// error
 		log.Fatal(err)
 	}
 }
