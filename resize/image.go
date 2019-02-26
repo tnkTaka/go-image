@@ -54,7 +54,6 @@ func ResizeImage() {
 	bit := buf.Bytes()
 	imgBase64 := base64.StdEncoding.EncodeToString([]byte(bit))
 
-	// デコードして画像を書き出してみる
 	// base64 decode
 	data, _ := base64.StdEncoding.DecodeString(imgBase64)
 	out, err := os.Create(fmt.Sprintf("../after.%s", format))
